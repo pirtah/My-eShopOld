@@ -1,0 +1,41 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block body %}
+
+    <h1 class="text-center">Inscription</h1>
+
+    {# {{ form(form) }} #}
+
+    <div class="row">
+        <div class="mx-auto col-8">
+        
+            {{ form_start(form) }}
+            
+                <div class="row">
+                    <div class="col-4">
+                        {{ form_row(form.firstname) }}
+                    </div>
+                    <div class="col-4">
+                        {{ form_row(form.lastname) }}
+                    </div>
+                    <div class="col-4">
+                        {{ form_row(form.gender) }}
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        {{ form_row(form.email) }}
+                    </div>
+                    <div class="col-4">
+                        {{ form_row(form.password) }}
+                    </div>
+                </div>
+
+            {{ form_end(form) }}
+        </div>
+    </div>
+
+{% endblock %}
